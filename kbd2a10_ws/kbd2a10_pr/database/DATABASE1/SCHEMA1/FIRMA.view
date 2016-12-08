@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<view xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>FIRMA</name>
+  <SQLQuery>
+    <queryString>SELECT 
+    KLIENT.ID_KLIENTA ID_KLIENTA, 
+    KLIENT.ADRES ADRES, 
+    KLIENT.NR_TELEFONU NR_TELEFONU, 
+    KLIENT.MAIL MAIL, 
+    KLIENT.NIP NIP, 
+    KLIENT.NAZWA NAZWA 
+FROM 
+    KLIENT
+where 
+    klient.selektor = &apos;f&apos;</queryString>
+  </SQLQuery>
+  <columns>
+    <column>
+      <name>ID_KLIENTA</name>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>ADRES</name>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>NR_TELEFONU</name>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>MAIL</name>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>NIP</name>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>NAZWA</name>
+      <notNull>false</notNull>
+    </column>
+  </columns>
+  <forceOnCreate>false</forceOnCreate>
+  <schema>
+    <name>SCHEMA1</name>
+  </schema>
+</view>
