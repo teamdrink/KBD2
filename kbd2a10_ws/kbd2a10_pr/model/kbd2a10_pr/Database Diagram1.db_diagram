@@ -593,7 +593,7 @@
       <property xmi:type='DI:Property' key='ShowHorizontalGridLines' value='false'/>
       <property xmi:type='DI:Property' key='ShowColumnsCompartment' value='true'/>
       <property xmi:type='DI:Property' key='showFKs' value='true'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='DB:N:TABLE:PRODUKTY:SCHEMA:SCHEMA1:DBObjectName:PRODUKTY:Provider:7048c95b-b7b2-43bc-86a1-7e539402741f' presentation='SYMBOLIC'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='DB:N:TABLE:PRODUKT:SCHEMA:SCHEMA1:DBObjectName:PRODUKT:Provider:7048c95b-b7b2-43bc-86a1-7e539402741f' presentation='SYMBOLIC'/>
       <size xmi:type='DI:Dimension' height='167.9521484375' width='192.515625'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id96934b9e-678e-4556-b315-1182d06b0c87'>
