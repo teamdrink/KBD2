@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <view xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>OSOBA</name>
+  <name>OSOBY</name>
   <SQLQuery>
     <queryString>SELECT 
-    KLIENT.ID_KLIENTA ID_KLIENTA,
-    KLIENT.ADRES ADRES, 
-    KLIENT.NR_TELEFONU NR_TELEFONU, 
-    KLIENT.MAIL MAIL, 
-    KLIENT.IMIE IMIE, 
-    KLIENT.NAZWISKO NAZWISKO, 
-    KLIENT.PESEL PESEL
+    KLIENCI.ID_KLIENTA ID_KLIENTA, 
+    KLIENCI.ADRES ADRES, 
+    KLIENCI.NR_TELEFONU NR_TELEFONU, 
+    KLIENCI.MAIL MAIL, 
+    KLIENCI.IMIE IMIE, 
+    KLIENCI.NAZWISKO NAZWISKO, 
+    KLIENCI.PESEL PESEL 
 FROM 
-    KLIENT
-    where 
-    klient.selektor = &apos;o&apos;</queryString>
+    KLIENCI 
+WHERE 
+    KLIENCI.SELEKTOR = &apos;o&apos;</queryString>
   </SQLQuery>
   <columns>
     <column>

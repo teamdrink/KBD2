@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>KLIENT</name>
+  <name>KLIENCI</name>
   <columns>
     <column>
       <name>ID_KLIENTA</name>
@@ -53,7 +53,7 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">4</value>
+            <value class="java.lang.String">11</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -160,7 +160,7 @@
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_KLIENTA</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>KLIENT</name>
+            <name>KLIENCI</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -172,7 +172,7 @@
       <indexID class="oracle.javatools.db.NameBasedID">
         <name>KLIENT_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>KLIENT</name>
+          <name>KLIENCI</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>

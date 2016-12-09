@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>FAKTURA</name>
+  <name>FAKTURY</name>
   <columns>
     <column>
       <name>ID_FAKTURY</name>
@@ -29,6 +29,16 @@
     <column>
       <name>SUMA</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">10</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Integer">2</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>NUMBER</typeName>
         </dataTypeID>
@@ -73,7 +83,7 @@
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_FAKTURY</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>FAKTURA</name>
+            <name>FAKTURY</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -85,7 +95,7 @@
       <indexID class="oracle.javatools.db.NameBasedID">
         <name>FAKTURA_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>FAKTURA</name>
+          <name>FAKTURY</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -99,7 +109,7 @@
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_KLIENTA</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>FAKTURA</name>
+            <name>FAKTURY</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -111,7 +121,7 @@
       <referenceID class="oracle.javatools.db.NameBasedID">
         <name>KLIENT_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>KLIENT</name>
+          <name>KLIENCI</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
