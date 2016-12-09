@@ -180,6 +180,12 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>KLIENCI_CHK1</name>
+      <checkCondition>(Selektor =&apos;O&apos; AND Imie is not null and nazwisko is not null or  Selektor &lt;&gt;&apos;O&apos; AND Imie is  null and nazwisko is  null ) AND (selektor=&apos;F&apos; and Nip is not null and nazwa is not null or selektor&lt;&gt;&apos;F&apos; and Nip is  null and nazwa is  null)
+</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
   </constraints>
   <indexes>
     <index>
