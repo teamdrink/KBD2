@@ -3,8 +3,29 @@
   <name>POZYCJE</name>
   <columns>
     <column>
+      <name>ID_FAKTURY</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">9</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>ID_PRODUKTU</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">6</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>NUMBER</typeName>
         </dataTypeID>
@@ -56,21 +77,6 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
-    <column>
-      <name>ID_FAKTURY</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">9</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMBER</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
@@ -78,16 +84,6 @@
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PRODUKTU</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>POZYCJE</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FAKTURY</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>POZYCJE</name>
             <schemaName>SCHEMA1</schemaName>
@@ -170,10 +166,6 @@
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID_PRODUKTU</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_FAKTURY</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

@@ -3,6 +3,21 @@
   <name>HISTORIE_CEN</name>
   <columns>
     <column>
+      <name>ID_PRODUKTU</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>CENA</name>
       <dataTypeUsage>
         <attributeValues>
@@ -31,28 +46,13 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>KONIEC_OBOWIAZYWANIAA</name>
+      <name>KONIEC_OBOWIAZYWANIA</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>false</notNull>
-    </column>
-    <column>
-      <name>ID_PRODUKTU</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">6</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMBER</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
