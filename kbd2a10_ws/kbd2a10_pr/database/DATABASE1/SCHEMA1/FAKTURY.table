@@ -77,6 +77,37 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>FAKTURY_CZY_OPLACONA_CHK</name>
+      <checkCondition>CZY_OPLACONA = &apos;T&apos; OR CZY_OPLACONA=&apos;N&apos;</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FAKTURA_KLIENT_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_KLIENTA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>FAKTURY</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>KLIENT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>KLIENCI</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>FAKTURA_PK</name>
       <columnIDs>
@@ -102,32 +133,6 @@
         <schemaName>SCHEMA1</schemaName>
         <type>INDEX</type>
       </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FAKTURA_KLIENT_FK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_KLIENTA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>FAKTURY</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>KLIENT_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>KLIENCI</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
     </constraint>
   </constraints>
   <indexes>
