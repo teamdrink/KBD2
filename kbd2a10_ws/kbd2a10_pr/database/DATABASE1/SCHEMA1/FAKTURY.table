@@ -145,6 +145,20 @@
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
+    <index>
+      <name>ID_KLIENTA_FK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_KLIENTA</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>NORMAL</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </index>
   </indexes>
   <properties>
     <entry>

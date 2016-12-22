@@ -92,6 +92,16 @@
           <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FAKTURY</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>POZYCJE</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
@@ -162,10 +172,28 @@
   </constraints>
   <indexes>
     <index>
+      <name>ID_FAKTURA</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_FAKTURY</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>NORMAL</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </index>
+    <index>
       <name>PRODUKTY_FAKTURA_PK</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID_PRODUKTU</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>ID_FAKTURY</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

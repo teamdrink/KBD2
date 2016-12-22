@@ -181,9 +181,25 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>KLIENCI_CHK1</name>
+      <name>KLIENCI_CHK_ATRYB</name>
       <checkCondition>(Selektor =&apos;O&apos; AND Imie is not null and nazwisko is not null or  Selektor &lt;&gt;&apos;O&apos; AND Imie is  null and nazwisko is  null ) AND (selektor=&apos;F&apos; and Nip is not null and nazwa is not null or selektor&lt;&gt;&apos;F&apos; and Nip is  null and nazwa is  null)
 </checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>NIP_CHK</name>
+      <checkCondition>NIP LIKE &apos;?????????&apos;</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>NR_TELEFONU_CHK</name>
+      <checkCondition>NR_TELEFONU  like &apos;???-???-???&apos;
+</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>PESEL_CHK</name>
+      <checkCondition>PESEL LIKE &apos;???????????&apos;</checkCondition>
       <enabled>true</enabled>
     </constraint>
   </constraints>

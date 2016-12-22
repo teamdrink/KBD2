@@ -83,6 +83,22 @@
       </referenceID>
     </constraint>
   </constraints>
+  <indexes>
+    <index>
+      <name>ID_PRODUKTU_FK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_PRODUKTU</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>NORMAL</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </index>
+  </indexes>
   <properties>
     <entry>
       <key>TableType</key>
