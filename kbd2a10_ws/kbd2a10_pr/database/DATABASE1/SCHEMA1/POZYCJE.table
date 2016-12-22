@@ -79,6 +79,60 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PRODUKTY_FAKTURA_FAKTURA_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FAKTURY</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>POZYCJE</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>FAKTURA_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>FAKTURY</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PRODUKTY_FAKTURA_PRODUKTY_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PRODUKTU</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>POZYCJE</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PRODUKTY_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PRODUKTY</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>PRODUKTY_FAKTURA_PK</name>
       <columnIDs>
@@ -114,60 +168,6 @@
         <schemaName>SCHEMA1</schemaName>
         <type>INDEX</type>
       </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>PRODUKTY_FAKTURA_FAKTURA_FK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FAKTURY</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>POZYCJE</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <onDeleteAction>CASCADE</onDeleteAction>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>FAKTURA_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>FAKTURY</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>PRODUKTY_FAKTURA_PRODUKTY_FK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PRODUKTU</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>POZYCJE</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <onDeleteAction>CASCADE</onDeleteAction>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PRODUKTY_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PRODUKTY</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
     </constraint>
   </constraints>
   <indexes>
