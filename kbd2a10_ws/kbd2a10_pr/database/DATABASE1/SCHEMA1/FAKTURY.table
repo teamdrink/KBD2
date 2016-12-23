@@ -18,6 +18,21 @@
       <notNull>true</notNull>
     </column>
     <column>
+      <name>ID_KLIENTA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">7</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>DATA_WYSTAWIENIA</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -60,27 +75,33 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
-    <column>
-      <name>ID_KLIENTA</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">7</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMBER</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>FAKTURY_CZY_OPLACONA_CHK</name>
-      <checkCondition>CZY_OPLACONA = &apos;T&apos; OR CZY_OPLACONA=&apos;N&apos;</checkCondition>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>FAKTURA_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FAKTURY</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>FAKTURY</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
       <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>FAKTURA_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>FAKTURY</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FAKTURA_KLIENT_FK</name>
@@ -108,31 +129,10 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>FAKTURA_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FAKTURY</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>FAKTURY</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>FAKTURY_CZY_OPLACONA_CHK</name>
+      <checkCondition>CZY_OPLACONA = &apos;T&apos; OR CZY_OPLACONA=&apos;N&apos;</checkCondition>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>FAKTURA_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>FAKTURY</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
     </constraint>
   </constraints>
   <indexes>

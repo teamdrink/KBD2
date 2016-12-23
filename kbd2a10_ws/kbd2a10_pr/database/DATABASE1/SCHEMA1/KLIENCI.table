@@ -128,7 +128,7 @@
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">11</value>
+            <value class="java.lang.String">10</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -154,6 +154,27 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>KLIENCI_CHK_ATRYB</name>
+      <checkCondition>(Selektor =&apos;O&apos; AND Imie is not null and nazwisko is not null or  Selektor &lt;&gt;&apos;O&apos; AND Imie is  null and nazwisko is  null ) AND (selektor=&apos;F&apos; and Nip is not null and nazwa is not null or selektor&lt;&gt;&apos;F&apos; and Nip is  null and nazwa is  null)
+</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>NIP_CHK</name>
+      <checkCondition>length(NIP) = 10 and   regexp_like(NIP, &apos;^[[:digit:]]{10}$&apos;)</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>NR_TELEFONU_CHK</name>
+      <checkCondition>length(NR_TELEFONU) = 11 and regexp_like(NR_TELEFONU, &apos;^[[:digit:]]{11}$&apos;)</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>PESEL_CHK</name>
+      <checkCondition>length(PESEL) = 11 and   regexp_like(PESEL, &apos;^[[:digit:]]{11}$&apos;)</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>KLIENT_PK</name>
       <columnIDs>
@@ -179,28 +200,6 @@
         <schemaName>SCHEMA1</schemaName>
         <type>INDEX</type>
       </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>KLIENCI_CHK_ATRYB</name>
-      <checkCondition>(Selektor =&apos;O&apos; AND Imie is not null and nazwisko is not null or  Selektor &lt;&gt;&apos;O&apos; AND Imie is  null and nazwisko is  null ) AND (selektor=&apos;F&apos; and Nip is not null and nazwa is not null or selektor&lt;&gt;&apos;F&apos; and Nip is  null and nazwa is  null)
-</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>NIP_CHK</name>
-      <checkCondition>NIP LIKE &apos;?????????&apos;</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>NR_TELEFONU_CHK</name>
-      <checkCondition>NR_TELEFONU  like &apos;???-???-???&apos;
-</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>PESEL_CHK</name>
-      <checkCondition>PESEL LIKE &apos;???????????&apos;</checkCondition>
-      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>
